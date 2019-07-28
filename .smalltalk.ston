@@ -12,6 +12,7 @@ SmalltalkCISpec {
         'Math-Accuracy-ODE',
 	'Math-ArbitraryPrecisionFloat',
 	'Math-AutomaticDifferenciation',
+	'Math-Accuracy-Core',
 	'Math-B*',
 	'Math-C*',
 	'Math-D*',
