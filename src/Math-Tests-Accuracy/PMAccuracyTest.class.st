@@ -32,6 +32,9 @@ PMAccuracyTest >> tearDown [
 
 { #category : #tests }
 PMAccuracyTest >> testArgumentAt [
+	self
+		assert: [ (a argumentAt: 'Aaa') = #(#(false) #(true)) ]
+		description: 'Key was: ' , a findKey, 'Arguments: ', a arguments .
 	self assert: (a argumentAt: 'Aaa') equals: #(#(false) #(true)).
 	self assert: (a argumentAt: 'Bbb') equals: #(#('a') #('AG')).
 	self assert: (a argumentAt: 'Ddd') isNil.

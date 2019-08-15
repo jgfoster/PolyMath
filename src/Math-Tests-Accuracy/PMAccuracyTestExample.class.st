@@ -13,6 +13,11 @@ Class {
 	#category : #'Math-Tests-Accuracy'
 }
 
+{ #category : #accessing }
+PMAccuracyTestExample >> arguments [
+	^ arguments
+]
+
 { #category : #tests }
 PMAccuracyTestExample >> checkAaa [
 self argument first ifTrue:[^#(1 1)].
