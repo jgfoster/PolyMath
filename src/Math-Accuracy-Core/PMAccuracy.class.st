@@ -211,7 +211,7 @@ PMAccuracy >> extremeCollection: acol max:aBoolean [
 PMAccuracy >> findKey [
 	| s selector matchingMessage |
 	s := thisContext sender.
-	selector := s sender method selector.
+	selector := s sender selector.
 	selector = 'initialize'
 		ifTrue: [ ^ 'AllTheRest' ].
 	matchingMessage := names

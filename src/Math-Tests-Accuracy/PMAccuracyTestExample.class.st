@@ -13,11 +13,6 @@ Class {
 	#category : #'Math-Tests-Accuracy'
 }
 
-{ #category : #accessing }
-PMAccuracyTestExample >> arguments [
-	^ arguments
-]
-
 { #category : #tests }
 PMAccuracyTestExample >> checkAaa [
 self argument first ifTrue:[^#(1 1)].
@@ -123,4 +118,9 @@ PMAccuracyTestExample >> testGetterAaa [
 { #category : #private }
 PMAccuracyTestExample >> testGetterBbb [
 ^{ self parameter .self argument.self resultsAt: 'Bbb'.self numberOfDifferentParametersAt: 'Bbb'.self numberOfDifferentResultsAt:'Bbb'}
+]
+
+{ #category : #acccessing }
+PMAccuracyTestExample >> theArguments [
+	^ arguments 
 ]
