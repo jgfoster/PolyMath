@@ -124,7 +124,7 @@ PMAccuracy >> argument: anArgument [
 { #category : #accessing }
 PMAccuracy >> argumentAt: aName [
 	| ar |
-	ar := arguments at: aName ifAbsent: [ arguments at: 'AllTheRest' ifAbsent: [ nil ] ].
+	ar := arguments at: aName ifAbsent: [ arguments at: 'AllTheRest' ifAbsent: [ #() ] ].
 	(ar isCollection and: [ ar isEmpty ])
 		ifTrue: [ ar := nil ].
 	^ ar

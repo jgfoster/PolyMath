@@ -20,6 +20,7 @@ PMAccuracyTest >> initialize [
 
 { #category : #running }
 PMAccuracyTest >> setUp [ 
+	super setUp.
 	a := PMAccuracyTestExample new.
 	PMAccuracyTestExample decimalPlaces: 3.
 ]
@@ -27,6 +28,7 @@ PMAccuracyTest >> setUp [
 { #category : #running }
 PMAccuracyTest >> tearDown [ 
 	PMAccuracyTestExample decimalPlaces: dp.
+	super tearDown 
 
 ]
 
@@ -34,7 +36,7 @@ PMAccuracyTest >> tearDown [
 PMAccuracyTest >> testArgumentAt [
 	self
 		assert: [ (a argumentAt: 'Aaa') = #(#(false) #(true)) ]
-		description: 'Key was: ', a findKey asString , 'Arguments: ', a theArguments asString .
+		description: 'Key was: ', a findKey asString , ' Arguments: ', a theArguments asString .
 	self assert: (a argumentAt: 'Aaa') equals: #(#(false) #(true)).
 	self assert: (a argumentAt: 'Bbb') equals: #(#('a') #('AG')).
 	self assert: (a argumentAt: 'Ddd') isNil.
