@@ -124,3 +124,8 @@ PMAccuracyTestExample >> testGetterBbb [
 PMAccuracyTestExample >> theArguments [
 	^ arguments 
 ]
+
+{ #category : #acccessing }
+PMAccuracyTestExample >> theSubclassSelectorNames [
+	^ names
+]
