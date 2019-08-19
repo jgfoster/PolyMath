@@ -95,10 +95,11 @@ PMAccuracyTest >> testDataTree [
 	| s |
 	a run.
 	self assert: (a dataTree atPath: #('iterations')) equals: 1.
+"	
 	self
 		assert: (a dataTree atPath: #('names' 'data'))
 		equals: #('Aaa' 'Bbb' 'Ccc' 'Ddd' 'Eee' 'Fff').
-"		
+		
 	self
 		assert: (a dataTree atPath: #('names' 'Aaa' #(1 2) #(4 4)))
 		equals:
