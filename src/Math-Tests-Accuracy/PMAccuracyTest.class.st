@@ -98,6 +98,7 @@ PMAccuracyTest >> testDataTree [
 	self
 		assert: (a dataTree atPath: #('names' 'data'))
 		equals: #('Aaa' 'Bbb' 'Ccc' 'Ddd' 'Eee' 'Fff').
+"		
 	self
 		assert: (a dataTree atPath: #('names' 'Aaa' #(1 2) #(4 4)))
 		equals:
@@ -126,6 +127,7 @@ PMAccuracyTest >> testDataTree [
 			-100.0.
 			Float infinity negated}.
 	self assert: (s at: 5) isNaN
+"
 ]
 
 { #category : #tests }
