@@ -74,9 +74,11 @@ PMAccuracyTestExample >> initializeAaa [
 
 { #category : #'initialize-release' }
 PMAccuracyTestExample >> initializeCcc [
-"this overrides defaults in initialize"
-self result: #((1)(1)(1)).
-self argument: #((1)(1.1)(0.9)).
+	"this overrides defaults in initialize"
+
+	self result: #(#(1) #(1) #(1)).
+	"self argument: #((1)(1.1)(0.9))."
+	self argument: #(#(1) #(1.1) #(0.9)) withKey: 'Ccc'
 ]
 
 { #category : #'initialize-release' }
