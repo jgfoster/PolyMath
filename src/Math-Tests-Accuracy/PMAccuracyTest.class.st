@@ -231,6 +231,13 @@ PMAccuracyTest >> testIfSeveralterations [
 ]
 
 { #category : #tests }
+PMAccuracyTest >> testInitializeAaa [
+	self
+		assert: (a theArguments includesKey: 'Aaa')
+		description: 'Expected ' , a theArguments asString , ' to contain Aaa'
+]
+
+{ #category : #tests }
 PMAccuracyTest >> testIterations [
 	| s d |
 	a
