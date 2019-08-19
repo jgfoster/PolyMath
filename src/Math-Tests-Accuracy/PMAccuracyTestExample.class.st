@@ -64,10 +64,12 @@ self parameter: #(#(1) #(3))
 
 { #category : #'initialize-release' }
 PMAccuracyTestExample >> initializeAaa [
-"this overrides defaults in #initialize:"
-self result: #(#(5 3) #(4 4)).
-self argument: #(#(false) #(true)).
-self parameter: #(#(1 2) #(3 2.8888))
+	"this overrides defaults in #initialize:"
+
+	self result: #(#(5 3) #(4 4)).
+	"self argument: #(#(false) #(true))."
+	self argument: #(#(false) #(true)) withKey: 'Aaa'.
+	self parameter: #(#(1 2) #(3 2.8888))
 ]
 
 { #category : #'initialize-release' }

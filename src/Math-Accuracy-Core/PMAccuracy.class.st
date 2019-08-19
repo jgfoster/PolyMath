@@ -122,6 +122,15 @@ PMAccuracy >> argument: anArgument [
 ]
 
 { #category : #accessing }
+PMAccuracy >> argument: anArgument withKey: key [
+	arguments
+		at: key
+		put: (anArgument ifNotNil: [ :a | self asArray: a ]).
+	^ anArgument
+		
+]
+
+{ #category : #accessing }
 PMAccuracy >> argumentAt: aName [
 	| ar |
 	ar := arguments at: aName ifAbsent: [ arguments at: 'AllTheRest' ifAbsent: [ #() ] ].
