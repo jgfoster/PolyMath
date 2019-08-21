@@ -16,7 +16,7 @@ Class {
 { #category : #tests }
 PMAccuracyTestExample >> checkAaa [
 	(self argument first isKindOf: Boolean)
-		ifFalse: [ Exception signal: (self argument first) ].
+		ifFalse: [ self error: (self argument first) ].
 	self argument first
 		ifTrue: [ ^ #(1 1) ].
 	^ {(4 + (0.4 * Random new next)).
